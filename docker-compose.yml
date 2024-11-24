@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  dev:
+    image: klakegg/hugo:latest
+    volumes:
+      - .:/src
+    ports:
+      - "1313:1313"
+    command: hugo server --bind 0.0.0.0 --watch
+  build:
+    image: klakegg/hugo:latest
+    volumes:
+      - .:/src
+    command: hugo --minify
+  run:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/usr/share/nginx/html

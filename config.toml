@@ -1,0 +1,29 @@
+baseURL = "http://localhost/"
+languageCode = "en-us"
+title = "My CV"
+theme = "learn"
+
+[params]
+  author = "Votre Nom"
+  description = "CV et Portfolio"
+  githubRepo = "https://github.com/votre-utilisateur/votre-repo"
+
+[[menu.main]]
+  name = "À propos de moi"
+  identifier = "about"
+  url = "/cv/"
+
+[[menu.main]]
+  name = "Expérience"
+  identifier = "experience"
+  url = "/cv/experience/"
+
+[[menu.main]]
+  name = "Formation"
+  identifier = "formation"
+  url = "/cv/formation/"
+
+[[menu.main]]
+  name = "Compétences"
+  identifier = "skills"
+  url = "/cv/skills/"
